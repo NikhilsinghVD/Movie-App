@@ -6,9 +6,10 @@ import './Home.scss';
 import { useDispatch } from 'react-redux';
 import { fetchAsyncMovies} from '../../redux/MovieSlice';
 const Home = () =>{
+    const movietext = "Pirates"
     const dispatch = useDispatch();
     useEffect(()=>{
-        dispatch(fetchAsyncMovies()); 
+        dispatch(fetchAsyncMovies(movietext)); 
     },[dispatch]);
     return(
         <>

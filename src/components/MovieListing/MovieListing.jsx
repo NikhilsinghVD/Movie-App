@@ -3,8 +3,10 @@ import { useSelector } from 'react-redux';
 import { getAllMovies } from '../../redux/MovieSlice';
 import MovieCard from '../MovieCard/MovieCard';
 import './MovieListing.scss';
-
+import Slider from 'react-slick';
+import {Settings} from '../../common/setting';
 const MovieListing = () =>{
+    
     const movies = useSelector(getAllMovies);
     let renderMovies = "";
     renderMovies = 
@@ -16,7 +18,9 @@ const MovieListing = () =>{
         <div className='movie-wrapper'>
             <div className='movie-list'>
                 <h2>Movies</h2>
-                <div className='movie-container'>{renderMovies}</div>
+                <div className='movie-container'>
+                   <Slider {...Settings}>{renderMovies}</Slider>
+                </div>
             </div>
         </div>
     );
