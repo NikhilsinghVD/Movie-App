@@ -1,0 +1,39 @@
+@import '../../common/colors.scss';
+
+.movie-section{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 40px 0px;
+    color: $font-primary;
+    font-weight:400;
+    .section-left{
+        .movieTitle{
+           font-size: 40px;
+           color: $font-primary;
+        }
+        .oneLiner{
+            display: flex;
+            margin: 20px 0px;
+            .movieRating{
+                .sTitle{
+                    color: $font-secondary;
+                    margin-left: 10px;
+                    margin-right: 10px;
+                }
+            }
+        }
+        .movie-plot{
+            margin: 20px 0px;
+        }
+        .movie-info{
+            div{
+                margin: 20px 0px;
+                .sTitle{
+                    color: $font-secondary;
+                    margin-left: 10px;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
